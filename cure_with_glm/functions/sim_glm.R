@@ -14,7 +14,7 @@ sim_glm <- function(j,n,tau,cp,lam0,beta0,
       period <- c(period1,period2)
       sex <- as.numeric(runif(n)<0.48)
       scaled_age <- scale(age)
-      scaled_period <- scale(age)
+      scaled_period <- scale(period)
       X <- as.data.frame(cbind(ones,scaled_age,scaled_period,sex))
       colnames(X) <- c("ones","age","period","sex")
       pies_true <- c(+0.5, # intercept
